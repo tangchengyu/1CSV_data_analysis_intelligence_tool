@@ -26,7 +26,7 @@ if data:
     with st.expander("原始数据"):
         st.dataframe(st.session_state["df"])# streamlit展示dataframe的现成组件
 
-query = st.text_area("请输入你关于以上表格的问题，或数据提取请求，或可视化要求（支持散点图、折线图、条形图）：", disabled=not data)
+query = st.text_area("请输入你关于以上表格的问题，或数据提取请求，或可视化要求（支持散点图、折线图、条形图）：")
 button = st.button("生成回答")
 
 if button and not openai_api_key:
